@@ -8,13 +8,13 @@
 ---
 
 **Languages:**  
-Javascript, Python (2.7), Java, Scala, Pig, SQL, HTML, CSS
+Javascript, Python 2.7, Java, Scala, Pig, SQL, HTML, CSS
 
 **Libraries:**  
-D3.js, TopoJSON, NumPy, SciPy
+D3.js, TopoJSON, Pandas, NumPy, SciPy
 
 **Frameworks:**  
-Flask, Hadoop, Spark
+Hadoop, Spark
 
 **Relational Database Management System:**  
 SQLite3
