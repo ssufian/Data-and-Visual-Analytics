@@ -1,0 +1,18 @@
+Q4 c(i)
+919
+
+Q4 c(ii)
+toString(toDate(value),"EEEE, MMMM dd, y")
+
+Q4 c(iii)
+Nominal data column: "regionidcity"
+This is an id label indicating what city the property is in. This does not have any quantitative value. 
+
+Ordinal data column: "buildingqualitytypeid"
+We know that the number from 1 to 12 indicates the quality of the building, but the differences between each one is not really known. For ex. how much better is a 6 than a 5?
+
+Q4 c(iv)
+if(toNumber(value) > 3, true, false)
+
+Q4 c(v)
+value.replace("*","")

@@ -1,0 +1,5 @@
+Q1(a)
+Done in Tableau. Deleted repetition by grouping Country of Asylum. Hid three columns that were not present in 2012. Shortened column name Refugees and Asylum-Seekers to reduce column width. Added table title to indicate year. Added subtotals and grand-totals to easily identify asylum country populations.
+
+Q1(b)
+Created multi-line chart of the four "violent crime" rates and the overall violent crime rate. Chose colorblind friendly color scheme and Murder rate in bright orange to make it more visible. Scaled line's thickness based on crime rate it represents over the years. Created aliases to shorten some labels.

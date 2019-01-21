@@ -1,0 +1,5 @@
+Q3(b)
+Plasma Glucose and Insulin are better combinations for separating the classes. In the Plasma vs Insulin scatterplot, as Plasma Glucose gets higher, occurrences of positive diabetes increases. In the BMI vs Blood Pressure scatterplot, we can't discern much as most of the points are clustered together in the center.  
+
+Q3(c)
+We scale the y-axis to reduce skewness in our data. The square root scale distributes Insulin more evenly, and brings our data points closer together as seen in the scatterplot. The log scale does this even more and is best used on data that has an exponential quality. 

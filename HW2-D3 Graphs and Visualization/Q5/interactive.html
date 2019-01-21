@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Q5 Interactive Visualization</title>
+		<script type="text/javascript" src="../lib/d3.v3.min.js"></script>
+		<style type = "text/css">
+		
+		#area2 {
+			position: absolute;
+			left: 800px;
+			top: 40px;
+		}
+
+		body {
+			font-family: "Arial";
+		}
+
+		.axis path,
+		.axis line {
+			fill: none;
+			stroke: grey;
+			stroke-width: 1;
+			shape-rendering: crispEdges;
+		}
+ 
+		.axis {
+			font-size: 16px;
+		}
+
+		.label {
+			color: #fff;
+			font-size: 16px;
+			fill: white;
+		}
+
+		path { 
+ 			 stroke: #196486;
+  			 stroke-width: 2;
+  			 fill: none;
+		}
+		</style>
+	</head>
+<body>
+	<div id = "area1"></div>
+	<div id = "area2"></div>
+	<script type="text/javascript" src="interactive.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+The results with cross-validation 10-fold resulted in higher errors and a lower coefficient of determination. This is due to the original model being overfit because there was only training and test data. Cross-validation includes training, validation, and test data, so it's able to generalize the model for better predictions.

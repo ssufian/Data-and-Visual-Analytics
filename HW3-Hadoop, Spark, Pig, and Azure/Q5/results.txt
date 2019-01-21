@@ -1,0 +1,23 @@
+1. (Train = 75%, Test = 25%)
+
+Mean Absolute Error	1656.147651
+Root Mean Squared Error	2456.983209
+Relative Absolute Error	0.276606
+Relative Squared Error	0.089608
+Coefficient of Determination	0.910392
+
+2. (Train = 90%, Test = 10%)
+
+Mean Absolute Error	1265.001752
+Root Mean Squared Error	1783.328763
+Relative Absolute Error	0.253181
+Relative Squared Error	0.067781
+Coefficient of Determination	0.932219
+
+3. (Linear Regression, Cross-validation 10-fold, with 2 new predictors)
+
+Mean Absolute Error	1780.668061
+Root Mean Squared Error	2458.226794
+Relative Absolute Error	0.297006
+Relative Squared Error	0.092833
+Coefficient of Determination	0.907167

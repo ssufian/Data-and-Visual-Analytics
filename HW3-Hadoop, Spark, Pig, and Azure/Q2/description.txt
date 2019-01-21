@@ -1,0 +1,13 @@
+Line 13: Define schema using case class where src, tot, and weights are all Ints. Define outside of main class.
+
+Line 24: Split the file tab delimited and map elements as Ints according to schema. Convert to dataframe.
+
+Line 27: Create dataframe "incoming" where col1 is the grouped target id and col2 is the sum of all incoming edge weights >= 5 of that group
+
+Line 30: Create dataframe "outgoing" where col1 is the grouped source id and col2 is the sum of all outgoing edge weights >= 5 of that group
+
+Line 33: Accumulated dataframe joins incoming and outgoing on the src and tgt ids in col1 and subtracts outgoing edge weights from incoming edge weights for that id. 
+
+Line 36: Convert dataframe elements into rows of strings with columns separated by tabs and save to the designated hdfs directory.
+
+

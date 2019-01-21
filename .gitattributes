@@ -1,0 +1,5 @@
+*.ipynb linguist-language=Python
+*.sql linguist-detectable=true
+
+# Vendored code
+**/d3.tip.v0.6.3.js linguist-vendored

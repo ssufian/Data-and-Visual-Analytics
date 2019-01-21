@@ -1,0 +1,14 @@
+Force Atlas Layout: 
+High repulsion strength (10,000) to expand the graph into clusters
+Adjust by Sizes to prevent node overlap
+Compact symmetric shape
+
+Node Colors:
+Partition -> Modularity class
+
+Node Shapes:
+Betweenness Centrality Range 20 to 200
+
+Node Labels:
+Relative to node size
+Filtered for degree range > 2

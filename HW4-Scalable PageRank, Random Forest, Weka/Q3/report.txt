@@ -1,0 +1,392 @@
+Section A
+
+1. Random Forest
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    653
+Attributes:   16
+              A1
+              A2
+              A3
+              A4
+              A5
+              A6
+              A7
+              A8
+              A9
+              A10
+              A11
+              A12
+              A13
+              A14
+              A15
+              A16
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 0.15 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         513               78.5605 %
+Incorrectly Classified Instances       140               21.4395 %
+Kappa statistic                          0.559 
+Mean absolute error                      0.3953
+Root mean squared error                  0.4189
+Relative absolute error                 79.7479 %
+Root relative squared error             84.1416 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.896    0.348    0.757      0.896    0.821      0.572    0.867     0.885     0
+                 0.652    0.104    0.839      0.652    0.734      0.572    0.867     0.833     1
+Weighted Avg.    0.786    0.237    0.794      0.786    0.781      0.572    0.867     0.861     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 320  37 |   a = 0
+ 103 193 |   b = 1
+
+
+2. Logistic Regression
+weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+
+(Coefficients were too many)
+
+Time taken to build model: 3.71 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         491               75.1914 %
+Incorrectly Classified Instances       162               24.8086 %
+Kappa statistic                          0.4997
+Mean absolute error                      0.2489
+Root mean squared error                  0.4902
+Relative absolute error                 50.2179 %
+Root relative squared error             98.4603 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.770    0.270    0.775      0.770    0.772      0.500    0.800     0.807     0
+                 0.730    0.230    0.725      0.730    0.727      0.500    0.799     0.733     1
+Weighted Avg.    0.752    0.252    0.752      0.752    0.752      0.500    0.799     0.773     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 275  82 |   a = 0
+  80 216 |   b = 1
+
+
+3. Multi-layer Perceptron
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 10 -V 0 -S 0 -E 20 -H a
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    653
+Attributes:   16
+
+Class 0
+    Input
+    Node 0
+Class 1
+    Input
+    Node 1
+
+
+Time taken to build model: 186.23 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         509               77.9479 %
+Incorrectly Classified Instances       144               22.0521 %
+Kappa statistic                          0.5558
+Mean absolute error                      0.2571
+Root mean squared error                  0.4072
+Relative absolute error                 51.8681 %
+Root relative squared error             81.7901 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.790    0.233    0.803      0.790    0.797      0.556    0.833     0.825     0
+                 0.767    0.210    0.752      0.767    0.759      0.556    0.833     0.833     1
+Weighted Avg.    0.779    0.223    0.780      0.779    0.780      0.556    0.833     0.829     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 282  75 |   a = 0
+  69 227 |   b = 1
+
+
+4. SVM
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    653
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+Squared loss (linear regression)
+
+Time taken to build model: 0.88 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         558               85.4518 %
+Incorrectly Classified Instances        95               14.5482 %
+Kappa statistic                          0.7067
+Mean absolute error                      0.1455
+Root mean squared error                  0.3814
+Relative absolute error                 29.3512 %
+Root relative squared error             76.6179 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.863    0.155    0.870      0.863    0.866      0.707    0.854     0.826     0
+                 0.845    0.137    0.836      0.845    0.840      0.707    0.854     0.777     1
+Weighted Avg.    0.855    0.147    0.855      0.855    0.855      0.707    0.854     0.803     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 308  49 |   a = 0
+  46 250 |   b = 1
+
+5. Naive Bayes
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes 
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    653
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         560               85.758  %
+Incorrectly Classified Instances        93               14.242  %
+Kappa statistic                          0.7096
+Mean absolute error                      0.1707
+Root mean squared error                  0.342 
+Relative absolute error                 34.4331 %
+Root relative squared error             68.7034 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.922    0.220    0.835      0.922    0.876      0.714    0.920     0.923     0
+                 0.780    0.078    0.892      0.780    0.832      0.714    0.920     0.909     1
+Weighted Avg.    0.858    0.156    0.861      0.858    0.856      0.714    0.920     0.917     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 329  28 |   a = 0
+  65 231 |   b = 1
+
+
+
+Section B
+
+1.a Random Forest
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+*** Out-of-bag estimates ***
+
+Correctly Classified Instances         515               78.8668 %
+Incorrectly Classified Instances       138               21.1332 %
+Kappa statistic                          0.5664
+Mean absolute error                      0.3857
+Root mean squared error                  0.4115
+Relative absolute error                 77.8181 %
+Root relative squared error             82.6575 %
+Total Number of Instances              653     
+
+
+Time taken to build model: 0.45 seconds
+
+I modified the calcOutOfBag parameter by setting it to true. Runtime increased by .3 seconds. This is probably due to the sampling type. Bootstrapping may take longer than CV sampling. The accuracy improved slightly by 2 correctly classified instances.
+
+
+1.b Logistic Regression
+weka.classifiers.functions.Logistic -R 1.0E-8 -M 5 -num-decimal-places 4
+Time taken to build model: 0.33 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         495               75.804  %
+Incorrectly Classified Instances       158               24.196  %
+Kappa statistic                          0.5121
+Mean absolute error                      0.2445
+Root mean squared error                  0.4861
+Relative absolute error                 49.3239 %
+Root relative squared error             97.6456 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.776    0.264    0.780      0.776    0.778      0.512    0.812     0.818     0
+                 0.736    0.224    0.732      0.736    0.734      0.512    0.812     0.759     1
+Weighted Avg.    0.758    0.246    0.758      0.758    0.758      0.512    0.812     0.791     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 277  80 |   a = 0
+  78 218 |   b = 1
+
+I modified the number of batches ran to 10, which decreased the runtime by 3.38 seconds. This is probably because the default runs more batch tests on the data. As a result my accuracy decreased slightly by approx 3%. More 0's were incorrectly classified and more 1's were correctly classified.
+
+
+1.c Multi-layer Perceptron
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 1 -V 0 -S 0 -E 20 -H a -batch-size 1
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+Instances:    653
+
+Test mode:    5-fold cross-validation
+
+Time taken to build model: 22.61 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         345               52.8331 %
+Incorrectly Classified Instances       308               47.1669 %
+Kappa statistic                          0.0005
+Mean absolute error                      0.4861
+Root mean squared error                  0.498 
+Relative absolute error                 98.0782 %
+Root relative squared error            100.0343 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.801    0.801    0.547      0.801    0.650      0.001    0.618     0.683     0
+                 0.199    0.199    0.454      0.199    0.277      0.001    0.618     0.593     1
+Weighted Avg.    0.528    0.528    0.505      0.528    0.481      0.001    0.618     0.642     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 286  71 |   a = 0
+ 237  59 |   b = 1
+
+I modified several things for this model. The batchSize to 1, trainingTime 1, and cross-validation to 5. I decreased all the values because even the original batchSize set to 10 took over 30 minutes to run. This model took about 5-10. As a result of decreased validation, accuracy dropped significantly.
+
+
+1.d SVM
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 100.0 -E 500 -C 0.001 -S 1
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+
+Time taken to build model: 1.11 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         567               86.83   %
+Incorrectly Classified Instances        86               13.17   %
+Kappa statistic                          0.7372
+Mean absolute error                      0.1317
+Root mean squared error                  0.3629
+Relative absolute error                 26.5706 %
+Root relative squared error             72.8983 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.826    0.081    0.925      0.826    0.873      0.742    0.873     0.859     0
+                 0.919    0.174    0.814      0.919    0.863      0.742    0.873     0.785     1
+Weighted Avg.    0.868    0.123    0.875      0.868    0.869      0.742    0.873     0.826     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 295  62 |   a = 0
+  24 272 |   b = 1
+
+
+I modified the value for lambda to 100. As lambda gets larger, more importance is placed on having large margins vs avoiding mistakes. This resulted in a longer runtime by a few seconds. This increased the accuracy slightly by 1% and correctly classified more 1's and less 0's.
+
+
+1.e Naive Bayes
+=== Run information ===
+
+Scheme:       weka.classifiers.bayes.NaiveBayes -batch-size 200
+Relation:     hw4-data-weka.filters.unsupervised.attribute.NumericToNominal-Rfirst-last
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         560               85.758  %
+Incorrectly Classified Instances        93               14.242  %
+Kappa statistic                          0.7096
+Mean absolute error                      0.1707
+Root mean squared error                  0.342 
+Relative absolute error                 34.4331 %
+Root relative squared error             68.7034 %
+Total Number of Instances              653     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.922    0.220    0.835      0.922    0.876      0.714    0.920     0.923     0
+                 0.780    0.078    0.892      0.780    0.832      0.714    0.920     0.909     1
+Weighted Avg.    0.858    0.156    0.861      0.858    0.856      0.714    0.920     0.917     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 329  28 |   a = 0
+  65 231 |   b = 1
+
+I modified the batches by doubling the amount to 200 and it had faster runtime  ~0 seconds! This is by far the fastest and second most accurate model. This model compared to others does not have as many parameters and it is likely fast due to using probabilities.
+
+2. 
+The Random Forest result from A1 has 78.56% accuracy compared to my implementation with 86.52% accuracy. The model in A1 used 10-fold cross validation instead of out-of-bag estimate. Weka ran more iterations at a faster speed, which is probably a result of the software program.
+
+3. 
+Among the models tested, it came down to Naive Bayes, with the fastest runtime and second highest accuracy, and SVM, with the highest accuracy. I chose SVM because it has slightly higher accuracy, better confusion matrix, and not much more runtime. SVM correctly classifies 7 more instances and has a better confusion matrix. SVM's confusion matrix incorrectly classifies 62 zeros and 24 ones. This is better than Naive Bayes, where the opposite is true. It's much safer to classify instances as 0's than 1's. Also, sacrificing a second of runtime for a more accurate model is a good tradeoff. 

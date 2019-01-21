@@ -1,0 +1,1 @@
+I scaled the nodes linearly from 3 to 10. This produced more even distribution of ranges that best represented the differences in node degrees. Sqrt scaled towards the larger end and squared scaled towards the extreme ends of the ranges.

@@ -1,0 +1,9 @@
+Average Degree = 1.118
+The degree is the number of edges (connections) a node has. The average is the total degrees in the network (in and out) divided by twice the total nodes. Average is close to 1 because most nodes have 1 edge.
+
+Network Diameter = 6
+The diameter is the furthest distance between any two nodes in the network. Each connected node has a distance of 1.
+
+Average Path Length = 3.879
+The Average Path Length is the sum of all the shortest paths (distances) between all nodes divided by the number of possible paths. 
+
