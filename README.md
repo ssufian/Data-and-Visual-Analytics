@@ -1,3 +1,4 @@
+Hi there
 # Data and Visual Analytics
 
 1. HW1-Python, SQLite, D3, Gephi, and OpenRefine
